@@ -60,10 +60,10 @@ cartoon_species = {'bugs': 'rabbit',
 
 Just as in a regular dictionary, the keys must be unique, otherwise the program will throw an error.
 ```
-my_dict = {'bugs': 'rabbit',
+cartoon_species = {'bugs': 'rabbit',
       	   'bugs': 'bunny'}
 
-my_dict
+cartoon_species
 >> {'bugs': 'bunny'}
 ```
 Also, it doesn't make sense to have two different values for the same key, so Python will only use the last key-value pair if two or more are used. **Important: Do not re-use keys in your dictionaries!**
@@ -77,7 +77,8 @@ cartoon_species = {'bugs': 'rabbit',
        	           'tom': 'cat',
       	           'jerry': 'mouse'}
 
-print my_dict['elmer']
+print cartoon_species['elmer']
+>> "human"
 ```
 ## Updating a Dictionary
 To modify the values inside a dictionary use the assignment operator and send it the key value.
@@ -88,35 +89,39 @@ cartoon_species = {'bugs': 'rabbit',
        	           'tom': 'cat',
       	           'jerry': 'mouse'}
 
-my_dict['bugs'] = 'bunny' #reassigns rabbit to bunny
+cartoon_species['bugs'] = 'bunny' #reassigns "rabbit" to "bunny"
 ```
+
 You can also use this technique to add key-value pairs to a dictionary that don’t already exist. For instance, with my_dict, I could do the following:
 ```
-my_dict['tweety'] = ‘bird’
-print my_dict
+cartoon_species['tweety'] = ‘bird’
+print cartoon_species
 
 {'tom': 'cat', 'wiley e': 'coyote', 'elmer': 'human', 'bugs': 'bunny', 'jerry': 'mouse', 'tweety': 'bird'}
 ```
-The {"tweety": "bird"} key-value pair has now been added to my_dict.
+The {"tweety": "bird"} key-value pair has now been added to cartoon_species.
 
 #Common Dictionary Operations
 ```
-len(my_dict)
-5
+len(cartoon_species)
+5 # Shows the number of key-value pairs in a dictionary.
 
-my_dict.clear()
-{}
+cartoon_species.clear()
+{} # Clears the dictionary
 
-del my_dict['bugs']
+del cartoon_species['bugs'] #Delete a key-value pair from the dictionary
 {‘elmer’: ‘human’,
 ‘wiley e’: ‘coyote’,
 ‘tom’: ‘cat’,
 ‘jerry’: ‘mouse’}
+
+
+
 ```
 ## Searching for a Key in a Dictionary
-What if you wanted to check if the key 'jerry' was in my_dict?  Use the in operator.
+What if you wanted to check if the key 'jerry' was in cartoon_species?  Use the in operator.
 ```
-if 'jerry' in my_dict:
+if 'jerry' in cartoon_species:
  print 'Hi Jerry!'
 ```
 This only works for keys in a dictionary, not the values.
@@ -124,7 +129,7 @@ This only works for keys in a dictionary, not the values.
 ## Looping over a dictionary
 It is often useful to be able to loop over the contents of a dictionary. Using the for-in loop we would write:
 ```
-for cartoon in my_dict:
+for cartoon in cartoon_species:
  print cartoon
 ```
 What do you notice? What is it printing? It’s printing the keys!
@@ -137,8 +142,8 @@ jerry
 ```
 How would you print the values? Combine the technique of accessing the dictionary through the key:
 ```
-for cartoon in my_dict:
- print my_dict[cartoon]
+for cartoon in cartoon_species:
+ print cartoon_species[cartoon]
 ```
 This prints:
 ```
