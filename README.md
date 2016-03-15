@@ -24,7 +24,7 @@ In Python (along with many other languages), these types of data structures are 
 
 
 ## Dictionaries
-When you open up a dictionary, what do you see? Words and their definitions. Dictionaries function are like that - they contain pairs of keys, which are usually words, and values. Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
+When you open up a dictionary, what do you see? Words and their definitions. Dictionaries work like that - they contain pairs of keys, which are usually words, and values (their definitions). Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
 
 <img src="https://raw.githubusercontent.com/learn-co-curriculum/cssi-4.10-python-dictionaries/master/images/dictionary.png">
 
