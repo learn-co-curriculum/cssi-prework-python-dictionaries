@@ -7,7 +7,7 @@ In JavaScript,objects are able to hold multiple key:value pairs, which make them
 ```
 var dog = {
         toys: ["Bone", "Ball", "Rope"],
-        age: 5
+        age: 5,
         species: "Golden Doodle",
         bark : function() {
          return "Woof";
@@ -18,12 +18,12 @@ var dog = {
 In Python (along with many other languages), these types of data structures are called dictionaries.
 
 
-##Objectives:
+## Objectives:
 + Understand Python Dictionary Syntax
 + Compare Dictionaries vs Lists
 
 
-##Dictionaries
+## Dictionaries
 When you open up a dictionary, what do you see? Words and their definitions. Dictionaries function are like that - they contain pairs of keys, which are usually words, and values. Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
 
 <img src="https://raw.githubusercontent.com/learn-co-curriculum/cssi-4.10-python-dictionaries/master/images/dictionary.png">
@@ -65,7 +65,7 @@ my_dict = {'bugs': 'rabbit',
 ```
 Also, it doesn't make sense to have two different values for the same key, so Python will throw an error.
 
-#Accessing Values in a Dictionary
+## Accessing Values in a Dictionary
 In order to access the values of a dictionary, you want to pass the key to the dictionary and it will return the value.
 ```
 cartoon_species = {'bugs': 'rabbit',
@@ -76,7 +76,7 @@ cartoon_species = {'bugs': 'rabbit',
 
 print my_dict['elmer']
 ```
-#Updating a Dictionary
+## Updating a Dictionary
 To modify the values inside a dictionary use the assignment operator and send it the key value.
 ```
 cartoon_species = {'bugs': 'rabbit',
@@ -110,7 +110,7 @@ del my_dict['bugs']
 ‘tom’: ‘cat’,
 ‘jerry’: ‘mouse’}
 ```
-#Searching for a Key in a Dictionary
+## Searching for a Key in a Dictionary
 What if you wanted to check if the key 'jerry' was in my_dict?  Use the in operator.
 ```
 if 'jerry' in my_dict:
@@ -118,7 +118,7 @@ if 'jerry' in my_dict:
 ```
 This only works for keys in a dictionary, not the values.
 
-#Looping over a dictionary
+## Looping over a dictionary
 It is often useful to be able to loop over the contents of a dictionary. Using the for-in loop we would write:
 ```
 for cartoon in my_dict:
@@ -146,5 +146,5 @@ cat
 mouse
 ```
 
-##Conclusion
+## Conclusion
 Remember dictionaries are just like lists but rather than having and index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when wanting to create and store large amounts of data of varying types.
