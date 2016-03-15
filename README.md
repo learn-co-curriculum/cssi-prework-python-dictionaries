@@ -62,8 +62,11 @@ Just as in a regular dictionary, the keys must be unique, otherwise the program 
 ```
 my_dict = {'bugs': 'rabbit',
       	   'bugs': 'bunny'}
+
+my_dict
+>> {'bugs': 'bunny'}
 ```
-Also, it doesn't make sense to have two different values for the same key, so Python will throw an error.
+Also, it doesn't make sense to have two different values for the same key, so Python will only use the last key-value pair if two or more are used. **Important: Do not re-use keys in your dictionaries!**
 
 ## Accessing Values in a Dictionary
 In order to access the values of a dictionary, you want to pass the key to the dictionary and it will return the value.
