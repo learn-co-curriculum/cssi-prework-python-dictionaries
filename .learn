@@ -1,0 +1,13 @@
+languages:
+  - Python
+tags:
+  - cssi, python
+  - variables
+  - math operators
+  - conditional statements
+  - lists
+  - loops
+  - functions
+  - dictionaries
+type:
+  - reference notes
