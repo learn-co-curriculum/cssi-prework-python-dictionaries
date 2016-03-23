@@ -126,11 +126,14 @@ if 'jerry' in cartoon_species:
 ```
 This only works for keys in a dictionary, not the values.
 
-## Looping over a dictionary
-It is often useful to be able to loop over the contents of a dictionary. Using the for-in loop we would write:
+## Dictionary Iteration
+It is often useful to be able to loop over the contents of a dictionary. You can iterate through the keys, the items or both the keys and the items. Each have slightly different syntax.
+
+### Iterating Through Keys
+Using the for loop we would write:
 ```
-for cartoon in cartoon_species:
- print cartoon
+for name in cartoon_species:
+ print name
 ```
 What do you notice? What is it printing? It’s printing the keys!
 ```
@@ -140,10 +143,12 @@ wiley e
 tom
 jerry
 ```
+
+### Interating over Values
 How would you print the values? Combine the technique of accessing the dictionary through the key:
 ```
-for cartoon in cartoon_species:
- print cartoon_species[cartoon]
+for species_type in cartoon_species:
+ print cartoon_species[species_type]
 ```
 This prints:
 ```
@@ -153,6 +158,14 @@ coyote
 cat
 mouse
 ```
+
+### Using iteritems() to Iterate Over Keys and Values
+If you wanted to print both the keys and the values, you could use the iteritems() method.
+```python
+for name , species_type in cartoon_species.iteritems():
+  print "{} is a {}".format(name, species_type)
+```
+
 
 ## Nested Dictionaries
 A nested dictionary is simply a dictionary where some or all of the values are other dictionaries. The same methods can be used to access elements in a nested dictionary.
@@ -186,6 +199,20 @@ We can iterate through nested dictionaries just like with non-nested dictionarie
 for city in city_info:
     print city_info[city]['website']
 ```
+
+## Conditions in Dictionaries
+
+Let's say we wanted to write a function that returned a stat about a city given the name of the city and the type of statistic.  
+
+First we have to loop through all of the statistics for the given city. Then we only want to print the value of the stat that matches the stat_type argument, so we use an if statement. Finally, once we find the stat that we wanted, we can index to it - again starting with the dictionary name, and the two keys, which in this case are both variables. `desired_city` is a parameter and city_stat is the local variable from the loop.
+```
+def city_stat(desired_city, desired_stat_type):
+    for city_stat in city_info[desired_city]:
+          if city_stat==desired_stat_type:
+            print city_info[desired_city][city_stat]
+```
+There is another way to filter through dictionaries, that we won't quite touch on here.
+
 
 ## Conclusion
 Remember dictionaries are just like lists but rather than having and index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when wanting to create and store large amounts of data of varying types.
