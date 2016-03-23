@@ -101,7 +101,7 @@ print cartoon_species
 ```
 The {"tweety": "bird"} key-value pair has now been added to cartoon_species.
 
-#Common Dictionary Operations
+## Common Dictionary Operations
 ```
 len(cartoon_species)
 5 # Shows the number of key-value pairs in a dictionary.
@@ -152,6 +152,39 @@ human
 coyote
 cat
 mouse
+```
+
+## Nested Dictionaries
+A nested dictionary is simply a dictionary where some or all of the values are other dictionaries. The same methods can be used to access elements in a nested dictionary.
+
+```python
+city_info = {'new_york' : { 'mayor' : "Bill DeBlasio",
+                            'population' : 8337000,
+                            'website' : "http://www.nyc.gov"
+                            },
+             'los_angeles' : { 'mayor' : "Eric Garcetti",
+                            'population' : 3884307,
+                            'website' : "http://www.lacity.org"
+                            },
+             'miami' : { 'mayor' : "Tomás Regalado",
+                            'population' : 419777,
+                            'website' : "http://www.miamigov.com"
+                            },
+             'chicago' : { 'mayor' : "Rahm Emanuel",
+                            'population' : 2695598,
+                            'website' : "http://www.cityofchicago.org/"
+                            }
+        }
+```
+For example, to get the mayor of Chicago, we need to first index at the key 'chicago' which gives us a value which contains it's own dictionary of three key-value pairs. To get to Rahm, we need to index again at the 'mayor' key.
+```python
+city_info["chicago"]["mayor"]
+```
+
+We can iterate through nested dictionaries just like with non-nested dictionaries. In the example elow city is a local variable for each city name (new_york, miami, los_angeles and chicago). When we want to print the website name, we index starting from the top - the dictionary name, followed by the first key (the cities) and the key we're looking for (website). Since city is a local variable that stores the name of each city as a string, we don't put it in single quotes.
+```
+for city in city_info:
+    print city_info[city]['website']
 ```
 
 ## Conclusion
