@@ -3,7 +3,7 @@
 
 The last data structure you will learn about in Python is similar to the last data structure you learned about in JavaScript.
 
-In JavaScript,objects are able to hold multiple key:value pairs, which make them extremely robust. A value could hold any data type, including methods.
+In JavaScript, objects are able to hold multiple key:value pairs, which make them extremely robust. A value could hold any data type, including methods.
 ```
 var dog = {
         toys: ["Bone", "Ball", "Rope"],
@@ -19,12 +19,12 @@ In Python (along with many other languages), these types of data structures are 
 
 
 ## Objectives:
-+ Understand Python Dictionary Syntax
-+ Compare Dictionaries vs Lists
++ Describe and use Python dictionary syntax
++ Compare and contrast dictionaries and lists
 
 
 ## Dictionaries
-When you open up a dictionary, what do you see? Words and their definitions. Dictionaries work like that - they contain pairs of keys, which are usually words, and values (their definitions). Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
+When you open up a dictionary, what do you see? Words and their definitions. Dictionaries work like that - they contain pairs of keys, which are usually words, and values, which are their definitions. Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
 
 <img src="https://raw.githubusercontent.com/learn-co-curriculum/cssi-4.10-python-dictionaries/master/images/dictionary.png">
 
@@ -58,7 +58,7 @@ cartoon_species = {'bugs': 'rabbit',
 ***Keys*** are on the left of the colons (‘bugs’, ‘elmer’, ‘wiley’, ‘tomas’, ‘jerry’)
 ***Values*** are on the right of the colons (‘rabbit’,‘human’,‘coyote’,‘cat’, ‘mouse’)
 
-Just as in a regular dictionary, the keys must be unique, otherwise the program will throw an error.
+Just as in a regular dictionary, the keys must be unique. Otherwise the program will throw an error.
 ```
 cartoon_species = {'bugs': 'rabbit',
       	   'bugs': 'bunny'}
@@ -189,12 +189,12 @@ city_info = {'new_york' : { 'mayor' : "Bill DeBlasio",
                             }
         }
 ```
-For example, to get the mayor of Chicago, we need to first index at the key 'chicago' which gives us a value which contains it's own dictionary of three key-value pairs. To get to Rahm, we need to index again at the 'mayor' key.
+For example, to get the mayor of Chicago, we need to first index at the key 'chicago' which gives us a value which contains its own dictionary of three key-value pairs. To get to Rahm, we need to index again at the 'mayor' key.
 ```python
 city_info["chicago"]["mayor"]
 ```
 
-We can iterate through nested dictionaries just like with non-nested dictionaries. In the example elow city is a local variable for each city name (new_york, miami, los_angeles and chicago). When we want to print the website name, we index starting from the top - the dictionary name, followed by the first key (the cities) and the key we're looking for (website). Since city is a local variable that stores the name of each city as a string, we don't put it in single quotes.
+We can iterate through nested dictionaries just like with non-nested dictionaries. In the example below, city is a local variable for each city name (new_york, miami, los_angeles, and chicago). When we want to print the website name, we index starting from the top - the dictionary name, followed by the first key (the cities) and the key we're looking for (website). Since city is a local variable that stores the name of each city as a string, we don't put it in single quotes.
 ```
 for city in city_info:
     print city_info[city]['website']
@@ -211,8 +211,7 @@ def city_stat(desired_city, desired_stat_type):
           if city_stat==desired_stat_type:
             print city_info[desired_city][city_stat]
 ```
-There is another way to filter through dictionaries, that we won't quite touch on here.
 
 
 ## Conclusion
-Remember dictionaries are just like lists but rather than having and index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when wanting to create and store large amounts of data of varying types.
+Remember dictionaries are just like lists but rather than having an index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when we want to create and store large amounts of data of varying types.
