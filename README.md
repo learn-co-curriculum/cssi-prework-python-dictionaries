@@ -1,6 +1,13 @@
 
 #Python Dictionaries
 
+## Objectives
+
++ Describe and use Python dictionary syntax
++ Compare and contrast dictionaries and lists
+
+## Overview
+
 The last data structure you will learn about in Python is similar to the last data structure you learned about in JavaScript.
 
 In JavaScript, objects are able to hold multiple key:value pairs, which make them extremely robust. A value could hold any data type, including methods.
@@ -16,12 +23,6 @@ var dog = {
 ```
 
 In Python (along with many other languages), these types of data structures are called dictionaries.
-
-
-## Objectives:
-+ Describe and use Python dictionary syntax
-+ Compare and contrast dictionaries and lists
-
 
 ## Dictionaries
 When you open up a dictionary, what do you see? Words and their definitions. Dictionaries work like that - they contain pairs of keys, which are usually words, and values, which are their definitions. Dictionaries are like lists, but instead of having numbers as indexes, the indexes are something else - usually strings. Check it out:
