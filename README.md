@@ -145,7 +145,7 @@ tom
 jerry
 ```
 
-### Interating over Values
+### Iterating over Values
 How would you print the values? Combine the technique of accessing the dictionary through the key:
 ```
 for species_type in cartoon_species:
