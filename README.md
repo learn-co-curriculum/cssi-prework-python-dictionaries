@@ -215,4 +215,4 @@ def city_stat(desired_city, desired_stat_type):
 
 
 ## Conclusion
-Remember dictionaries are just like lists but rather than having an index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when we want to create and store large amounts of data of varying types.
+Remember that dictionaries are just like lists, but rather than having an index (0,1,2,3) you have keys for each value. Dictionaries become extremely important when we want to create and store large amounts of data of varying types.
